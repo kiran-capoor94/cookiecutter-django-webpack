@@ -18,6 +18,7 @@ Note: Use a Virtual Env to setup your projects.
 * Installation
     $ cookiecutter https://github.com/kiran-capoor94/cookiecutter-django-webpack
 * Use default for setup options.
+    
 * Enter the project directory where package.json file is
     $ cd project_slug/
 * Install Node Dependencies
