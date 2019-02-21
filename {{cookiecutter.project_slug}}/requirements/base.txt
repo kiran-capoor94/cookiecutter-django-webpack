@@ -1,0 +1,36 @@
+pytz # https://github.com/stub42/pytz
+python-slugify  # https://github.com/un33k/python-slugify
+Pillow  # https://github.com/python-pillow/Pillow
+{%- if cookiecutter.use_compressor == "y" %}
+rcssmin {%- if cookiecutter.windows == 'y' %} --install-option="--without-c-extensions"{%- endif %}  # https://github.com/ndparker/rcssmin
+{%- endif %}
+argon2-cffi  # https://github.com/hynek/argon2_cffi
+{%- if cookiecutter.use_whitenoise == 'y' %}
+whitenoise  # https://github.com/evansd/whitenoise
+{%- endif %}
+redis # pyup: < 3 # https://github.com/antirez/redis
+{%- if cookiecutter.use_celery == "y" %}
+celery # pyup: < 5.0  # https://github.com/celery/celery
+{%- if cookiecutter.use_docker == 'y' %}
+flower  # https://github.com/mher/flower
+{%- endif %}
+{%- endif %}
+
+# Django
+# ------------------------------------------------------------------------------
+django  # pyup: < 2.1  # https://www.djangoproject.com/
+django-environ  # https://github.com/joke2k/django-environ
+django-model-utils  # https://github.com/jazzband/django-model-utils
+django-allauth  # https://github.com/pennersr/django-allauth
+django-crispy-forms  # https://github.com/django-crispy-forms/django-crispy-forms
+{%- if cookiecutter.use_compressor == "y" %}
+django-compressor  # https://github.com/django-compressor/django-compressor
+{%- endif %}
+django-redis  # https://github.com/niwinz/django-redis
+{%- if cookiecutter.use_webpack == "y" %}
+django-webpack # https://github.com/owais/django-webpack-loader
+{%- endif %}
+
+# Django REST Framework
+djangorestframework  # https://github.com/encode/django-rest-framework
+coreapi  # https://github.com/core-api/python-client
