@@ -1,6 +1,10 @@
 ---
 name: Improvement Suggestion
 about: Let us know how we could improve
+title: ''
+labels: ''
+assignees: ''
+
 ---
 
 ## Description
@@ -20,5 +24,3 @@ about: Let us know how we could improve
 ## Use case(s) / visualization(s)
 
 [//]: # ("Better to see something once than to hear about it a thousand times.")
-
-
