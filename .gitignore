@@ -219,6 +219,10 @@ tags
 pyvenv.cfg
 pip-selfcheck.json
 
+# Pipenv template
+Pipfile
+Pipfile.lock
+
 
 # Even though the project might be opened and edited
 # in any of the JetBrains IDEs, it makes no sence whatsoever
