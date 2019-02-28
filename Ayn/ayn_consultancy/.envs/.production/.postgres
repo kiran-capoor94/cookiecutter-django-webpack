@@ -1,7 +1,0 @@
-# PostgreSQL
-# ------------------------------------------------------------------------------
-POSTGRES_HOST=postgres
-POSTGRES_PORT=5432
-POSTGRES_DB=ayn_consultancy
-POSTGRES_USER=amIkWMeqrrbxYHLvvozgmpCnVKVuTVjA
-POSTGRES_PASSWORD=p7U2JIQGOUT5jB9nuYA1LyARUEe2TiCfuha9neg3EnTXxxHz9IgeHwMaSEdqe9Gc

@@ -1,5 +1,0 @@
-[run]
-include = ayn_consultancy/*
-omit = *migrations*, *tests*
-plugins =
-    django_coverage_plugin
