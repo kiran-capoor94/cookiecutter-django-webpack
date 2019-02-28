@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "task-ayn_consultancy",
+      "appliesTo": "AynSite/ayn_consultancy/",
+      "type": "launch"
+    }
+  ]
+}
