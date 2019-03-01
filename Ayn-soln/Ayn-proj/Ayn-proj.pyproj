@@ -1,0 +1,131 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>Ayn-proj</Name>
+    <RootNamespace>Ayn-proj</RootNamespace>
+    <InterpreterId>Global|VisualStudio|Virtual Env for Ayn</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>b5120e40-a48e-4455-94c8-5dcca2fb6a1e</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>Ayn_proj</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>Ayn_proj.settings</DjangoSettingsModule>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Ayn_proj\apps\users\admin.py" />
+    <Compile Include="Ayn_proj\apps\users\apps.py" />
+    <Compile Include="Ayn_proj\apps\users\migrations\__init__.py" />
+    <Compile Include="Ayn_proj\apps\users\models.py" />
+    <Compile Include="Ayn_proj\apps\users\tests.py" />
+    <Compile Include="Ayn_proj\apps\users\views.py" />
+    <Compile Include="Ayn_proj\apps\users\__init__.py" />
+    <Compile Include="Ayn_proj\core\admin.py" />
+    <Compile Include="Ayn_proj\core\apps.py" />
+    <Compile Include="Ayn_proj\core\migrations\__init__.py" />
+    <Compile Include="Ayn_proj\core\models.py" />
+    <Compile Include="Ayn_proj\core\tests.py" />
+    <Compile Include="Ayn_proj\core\views.py" />
+    <Compile Include="Ayn_proj\core\__init__.py" />
+    <Compile Include="Ayn_proj\package.json">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ayn_proj\settings\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="manage.py" />
+    <Compile Include="Ayn_proj\__init__.py" />
+    <Compile Include="Ayn_proj\settings\base.py" />
+    <Compile Include="Ayn_proj\urls.py" />
+    <Compile Include="Ayn_proj\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ayn_proj\apps\users\templates\users\index.html" />
+    <Content Include="Ayn_proj\assets\js\index.js" />
+    <Content Include="Ayn_proj\assets\scss\index.scss" />
+    <Content Include="Ayn_proj\core\templates\core\index.html" />
+    <Content Include="Ayn_proj\webpack.config.js" />
+    <Content Include="Ayn_proj\deps\base.txt" />
+    <Content Include="Ayn_proj\deps\local.txt" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Ayn_proj\" />
+    <Folder Include="Ayn_proj\apps\" />
+    <Folder Include="Ayn_proj\apps\users\" />
+    <Folder Include="Ayn_proj\apps\users\migrations\" />
+    <Folder Include="Ayn_proj\apps\users\templates\" />
+    <Folder Include="Ayn_proj\apps\users\templates\users\" />
+    <Folder Include="Ayn_proj\assets\" />
+    <Folder Include="Ayn_proj\assets\bundles\" />
+    <Folder Include="Ayn_proj\assets\js\" />
+    <Folder Include="Ayn_proj\assets\images\" />
+    <Folder Include="Ayn_proj\assets\scss\" />
+    <Folder Include="Ayn_proj\core\" />
+    <Folder Include="Ayn_proj\core\migrations\" />
+    <Folder Include="Ayn_proj\core\templates\" />
+    <Folder Include="Ayn_proj\core\templates\core\" />
+    <Folder Include="Ayn_proj\deps\" />
+    <Folder Include="Ayn_proj\static\" />
+    <Folder Include="Ayn_proj\settings\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|VisualStudio|Virtual Env for Ayn" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
