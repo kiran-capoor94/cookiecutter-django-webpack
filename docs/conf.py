@@ -9,8 +9,8 @@
 # serve to show the default.
 
 from datetime import datetime
-import os
-import sys
+import os  # noqa
+import sys  # noqa
 
 now = datetime.now()
 
@@ -41,8 +41,8 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = "Cookiecutter Django"
-copyright = "2013-2018, Daniel Roy Greenfeld".format(now.year)
+project = "Cookiecutter Django Webpack"
+copyright = "2019, Kiran Capoor".format(now.year)
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -165,7 +165,7 @@ html_static_path = ["_static"]
 # html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "cookiecutter-djangodoc"
+htmlhelp_basename = "cookiecutter-djangowebpackdoc"
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -184,9 +184,9 @@ latex_elements = {
 latex_documents = [
     (
         "index",
-        "cookiecutter-django.tex",
-        "cookiecutter-django Documentation",
-        "cookiecutter-django",
+        "cookiecutter-django-webpack.tex",
+        "cookiecutter-django-webpack Documentation",
+        "cookiecutter-django-webpack",
         "manual",
     )
 ]
@@ -219,9 +219,9 @@ latex_documents = [
 man_pages = [
     (
         "index",
-        "Cookiecutter Django",
-        "Cookiecutter Django documentation",
-        ["Daniel Roy Greenfeld"],
+        "Cookiecutter Django Webpack",
+        "Cookiecutter Django Webpack documentation",
+        ["Kiran Capoor"],
         1,
     )
 ]
@@ -238,11 +238,11 @@ man_pages = [
 texinfo_documents = [
     (
         "index",
-        "Cookiecutter Django",
-        "Cookiecutter Django documentation",
-        "Daniel Roy Greenfeld",
-        "Cookiecutter Django",
-        "A Cookiecutter template for creating production-ready Django projects quickly.",
+        "Cookiecutter Django Webpack",
+        "Cookiecutter Django Webpack documentation",
+        "Kiran Capoor",
+        "Cookiecutter Django Webpack",
+        "A Cookiecutter template for creating production-ready Django & Webpack projects quickly.",
         "Miscellaneous",
     )
 ]
