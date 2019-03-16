@@ -1,7 +1,7 @@
 Cookiecutter Django Webpack
 =======================
 
-STILL UNDER DEVELOPMENT
+ALPHA
 -----------------------
 
 Cookiecutter Django Webpack can be used in production scenarios only if you know how it Works.
