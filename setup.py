@@ -32,7 +32,7 @@ setup(
     license="BSD",
     zip_safe=False,
     classifiers=[
-        "Development Status :: 4 - Beta",
+        "Development Status :: 3 - Beta",
         "Environment :: Console",
         "Framework :: Django :: 2.1",
         "Intended Audience :: Developers",
