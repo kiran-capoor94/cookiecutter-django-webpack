@@ -12,6 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fixed Node Module Path Finder in Webpack Config
 - Basic Upgrades to pyhton v3.7+
 - Updated Readme File
+- Bump Version 1.0.0 [2019-04-14]
 
 ### Changed
 
