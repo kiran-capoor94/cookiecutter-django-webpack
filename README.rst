@@ -1,6 +1,7 @@
 Cookiecutter Django Webpack (Beta)
 =======================
 
+
 Introduction
 ---------
 Create production ready django projects with webpack easily.
