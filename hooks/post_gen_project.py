@@ -5,7 +5,7 @@ NOTE:
     can potentially be run in Python 2.x environment
     (at least so we presume in `pre_gen_project.py`).
 
-TODO: ? restrict Cookiecutter Django project initialization to Python 3.x environments only
+TODO: ? restrict Cookiecutter Django project initialization to Python 3.x environments only # noqa
 """
 from __future__ import print_function
 
@@ -71,8 +71,8 @@ def remove_utility_files():
 def remove_heroku_files():
     file_names = ["Procfile", "runtime.txt", "requirements.txt"]
     for file_name in file_names:
-        if file_name == "requirements.txt" and "{{ cookiecutter.use_travisci }}".lower() == "y":
-            # don't remove the file if we are using travisci but not using heroku
+        if file_name == "requirements.txt" and "{{ cookiecutter.use_travisci }}".lower() == "y":  # noqa
+            # don't remove the file if we are using travisci but not using heroku # noqa
             continue
         os.remove(file_name)
 
@@ -112,7 +112,7 @@ def append_to_project_gitignore(path):
 
 
 def generate_random_string(
-    length, using_digits=False, using_ascii_letters=False, using_punctuation=False
+    length, using_digits=False, using_ascii_letters=False, using_punctuation=False  # noqa
 ):
     """
     Example:
@@ -141,7 +141,7 @@ def set_flag(file_path, flag, value=None, formatted=None, *args, **kwargs):
         random_string = generate_random_string(*args, **kwargs)
         if random_string is None:
             print(
-                "We couldn't find a secure pseudo-random number generator on your system. "
+                "We couldn't find a secure pseudo-random number generator on your system. "  # noqa
                 "Please, make sure to manually {} later.".format(flag)
             )
             random_string = flag
@@ -310,8 +310,7 @@ def main():
         remove_heroku_files()
 
     if (
-        "{{ cookiecutter.use_docker }}".lower() == "n"
-        and "{{ cookiecutter.use_heroku }}".lower() == "n"
+        "{{ cookiecutter.use_docker }}".lower() == "n" and "{{ cookiecutter.use_heroku }}".lower() == "n"
     ):
         if "{{ cookiecutter.keep_local_envs_in_vcs }}".lower() == "y":
             print(
@@ -330,19 +329,18 @@ def main():
         remove_gulp_files()
         # remove_packagejson_file()
     if (
-        "{{ cookiecutter.js_task_runner }}".lower() != "none"
-        and "{{ cookiecutter.use_docker }}".lower() == "y"
+        "{{ cookiecutter.js_task_runner }}".lower() != "none" and "{{ cookiecutter.use_docker }}".lower() == "y"
     ):
         print(
-            WARNING
-            + "Docker and {} JS task runner ".format(
+            WARNING +
+            "Docker and {} JS task runner ".format(
                 "{{ cookiecutter.js_task_runner }}".lower().capitalize()
-            )
-            + "working together not supported yet. "
-              "You can continue using the generated project like you "
-              "normally would, however you would need to add a JS "
-              "task runner service to your Docker Compose configuration "
-              "manually." + TERMINATOR
+            ) +
+            "working together not supported yet. "
+            "You can continue using the generated project like you "
+            "normally would, however you would need to add a JS "
+            "task runner service to your Docker Compose configuration "
+            "manually." + TERMINATOR
         )
 
     if "{{ cookiecutter.use_celery }}".lower() == "n":

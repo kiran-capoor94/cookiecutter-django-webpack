@@ -1,11 +1,11 @@
 import os
 import re
-import sh
+import pbs
 
 import pytest
 from binaryornot.check import is_binary
 
-PATTERN = "{{(\s?cookiecutter)[.](.*?)}}"
+PATTERN = r"{{(\s?cookiecutter)[.](.*?)}}"
 RE_OBJ = re.compile(PATTERN)
 
 
@@ -82,6 +82,6 @@ def test_flake8_compliance(cookies):
     result = cookies.bake()
 
     try:
-        sh.flake8(str(result.project))
-    except sh.ErrorReturnCode as e:
+        pbs.flake8(str(result.project))
+    except pbs.ErrorReturnCode as e:
         pytest.fail(e)

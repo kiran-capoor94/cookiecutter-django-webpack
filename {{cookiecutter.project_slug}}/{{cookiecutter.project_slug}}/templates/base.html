@@ -1,4 +1,6 @@
-{% raw %}{% load static i18n {% if cookiecutter.use_compressor == "y" %}compress{% endif %} {% if cookiecutter.use_webpack == 'y' %}render_bundle from webpack_loader{% endif %}{% endraw %}%}
+{% raw %}{% load static i18n account {% endraw %}{% if cookiecutter.use_compressor == "y" %}{% raw %}compress %}{% endraw %}{% endif %}
+{% if cookiecutter.use_webpack == "y" %} {% raw %}{% load render_bundle from webpack_loader %}{% endraw %}{% endif %}
+
 {% raw %}
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +34,8 @@
     <link href="{% static 'css/project.css' %}" rel="stylesheet">
     {% endraw %}{% endif %}{% raw %}
     {% endraw %}{% if cookiecutter.use_compressor == "y" %}{% raw %}{% endcompress %}{% endraw %}{% endif %}{% raw %}
-    {% endblock %}
+    {% endraw %}{% if cookiecutter.use_webpack == "y" %}{% render_bundle 'main' 'css' attrs='async' %}{% endif %}{% raw %}
+    {% endblock %}{% endraw %}
 
   </head>
 
@@ -116,8 +119,8 @@
       {% endraw %}{% if cookiecutter.use_compressor == "y" %}{% raw %}{% compress js %}{% endraw %}{% endif %}{% raw %}
       <script src="{% static 'js/project.js' %}"></script>
       {% endraw %}{% if cookiecutter.use_compressor == "y" %}{% raw %}{% endcompress %}{% endraw %}{% endif %}{% raw %}
-
-      {% raw %}{% render_bundle 'main' %}{% raw %}
+      {% endraw %}{% if cookiecutter.use_webpack == "y" %}{% raw %}
+      {% render_bundle 'main' 'js' attrs="async" %}{% endraw %}{% endif %}{% raw %}
 
     {% endblock javascript %}
   </body>

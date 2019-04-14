@@ -5,7 +5,6 @@ root = true
 [*]
 charset = utf-8
 end_of_line = lf
-insert_final_newline = true
 trim_trailing_whitespace = true
 
 [*.{py,rst,ini}]
@@ -17,11 +16,16 @@ indent_style = space
 indent_size = 2
 
 [*.md]
-trim_trailing_whitespace = false
+trim_trailing_whitespace = true
 
 [Makefile]
 indent_style = tab
 
 [nginx.conf]
+indent_style = space
+indent_size = 2
+
+# Indentation override for all JS under lib directory
+[*.js]
 indent_style = space
 indent_size = 2

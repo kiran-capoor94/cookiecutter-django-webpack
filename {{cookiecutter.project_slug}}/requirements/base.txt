@@ -28,7 +28,7 @@ django-compressor  # https://github.com/django-compressor/django-compressor
 {%- endif %}
 django-redis  # https://github.com/niwinz/django-redis
 {%- if cookiecutter.use_webpack == "y" %}
-django-webpack # https://github.com/owais/django-webpack-loader
+django-webpack-loader # https://github.com/owais/django-webpack-loader
 {%- endif %}
 
 # Django REST Framework

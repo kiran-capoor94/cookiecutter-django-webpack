@@ -34,7 +34,7 @@ if "{{ cookiecutter.use_docker }}".lower() == "n":
         )
         yes_options, no_options = frozenset(["y"]), frozenset(["n"])
         while True:
-            choice = raw_input().lower()
+            choice = raw_input().lower()  # noqa
             if choice in yes_options:
                 break
 

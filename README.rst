@@ -1,14 +1,15 @@
-Cookiecutter Django Webpack
+Cookiecutter Django Webpack (Beta)
 =======================
 
-ALPHA
------------------------
 
-Cookiecutter Django Webpack can be used in production scenarios only if you know how it Works.
-Please use this at your own discretion.
+Introduction
+---------
+Create production ready django projects with webpack easily.
 
 Basic Webpack Configuration works.
 Cookiecutter Django Webpack ships with bootstrap "4.3.1".
+
+Do not Mail me for Issues please raise an issue in the GitHub Issues Section.
 
 Usage
 ---------
@@ -18,7 +19,7 @@ Note: Use a Virtual Env to setup your projects.
 * Installation
     $ cookiecutter https://github.com/kiran-capoor94/cookiecutter-django-webpack
 * Use default for setup options.
-    
+
 * Enter the project directory where package.json file is
     $ cd project_slug/
 * Install Node Dependencies
@@ -35,6 +36,8 @@ TODO List:
 * Supporting 100% Coverage & Tests
 * Make Documentation
 
+Thanks to:
+---------
 Powered by Cookiecutter Django, Cookiecutter Django Webpack is a framework for jumpstarting
 production-ready Django projects quickly.
 
