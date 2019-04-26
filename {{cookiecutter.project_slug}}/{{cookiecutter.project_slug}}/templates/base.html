@@ -1,5 +1,5 @@
-{% raw %}{% load static i18n account render_bundle from webpack_loader {% endraw %}{% if cookiecutter.use_compressor == "y" %}{% raw %}compress %}{% endraw %}{% endif %}
-{% if cookiecutter.use_webpack == "y" %} {% raw %}{% load render_bundle from webpack_loader %}{% endraw %}{% endif %}
+{% raw %}{% load static i18n account compress %}{% endraw %}
+{% if cookiecutter.use_webpack == "y" %}{% raw %}{% load render_bundle from webpack_loader %}{% endraw %}{% endif %}
 
 {% raw %}
 <!DOCTYPE html>
