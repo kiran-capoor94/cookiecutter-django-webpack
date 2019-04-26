@@ -34,8 +34,10 @@
     <link href="{% static 'css/project.css' %}" rel="stylesheet">
     {% endraw %}{% endif %}{% raw %}
     {% endraw %}{% if cookiecutter.use_compressor == "y" %}{% raw %}{% endcompress %}{% endraw %}{% endif %}{% raw %}
-    {% endraw %}{% if cookiecutter.use_webpack == "y" %}{% render_bundle 'main' 'css' attrs='async' %}{% endif %}{% raw %}
-    {% endblock %}{% endraw %}
+    {% endraw %}{% if cookiecutter.use_webpack == "y" %}{% raw %}{% render_bundle 'main' 'css' attrs='async' %}{% endraw %}{% endif %}
+    {% raw %}
+    {% endblock %}
+    {% endraw %}
 
   </head>
 
