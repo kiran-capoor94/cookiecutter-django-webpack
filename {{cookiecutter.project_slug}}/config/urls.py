@@ -20,6 +20,8 @@ urlpatterns = [
         include("{{ cookiecutter.project_slug }}.users.urls", namespace="users"),
     ),
     path("accounts/", include("allauth.urls")),
+    path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
+    path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
     # Your stuff: custom urls includes go here
 ] + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
