@@ -1,6 +1,8 @@
 Cookiecutter Django Webpack (Beta)
 =======================
 
+Update: Now ships with Django-Jet as default admin interface.
+
 
 Introduction
 ---------

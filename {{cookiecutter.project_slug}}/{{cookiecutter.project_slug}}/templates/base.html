@@ -1,4 +1,5 @@
-{% raw %}{% load static i18n account compress %}{% endraw %}
+{% raw %}{% load static i18n account %}{% endraw %}
+{% if cookiecutter.use_compressor == "y" %}{% raw %}{% load compress %}{% endraw %}
 {% if cookiecutter.use_webpack == "y" %}{% raw %}{% load render_bundle from webpack_loader %}{% endraw %}{% endif %}
 
 {% raw %}

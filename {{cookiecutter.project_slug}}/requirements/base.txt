@@ -23,6 +23,7 @@ django-environ  # https://github.com/joke2k/django-environ
 django-model-utils  # https://github.com/jazzband/django-model-utils
 django-allauth  # https://github.com/pennersr/django-allauth
 django-crispy-forms  # https://github.com/django-crispy-forms/django-crispy-forms
+django-jet  # https://github.com/geex-arts/django-jet
 {%- if cookiecutter.use_compressor == "y" %}
 django-compressor  # https://github.com/django-compressor/django-compressor
 {%- endif %}
