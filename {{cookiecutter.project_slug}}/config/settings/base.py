@@ -152,7 +152,7 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
 
 STATICFILES_DIRS = [
-    str(APPS_DIR.path.join('static')),
+    str(APPS_DIR('static')),
 ]
 
 
@@ -210,7 +210,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#fixture-dirs
 FIXTURE_DIRS = (
-    str(APPS_DIR.path('fixtures')),
+    str(APPS_DIR('fixtures')),
 )
 
 # SECURITY
@@ -296,7 +296,7 @@ WEBPACK_LOADER = {
     'DEFAULT': {
         'CACHE': not DEBUG,
         'BUNDLE_DIR_NAME': 'bundles/',  # must end with slash
-        'STATS_FILE': str(APPS_DIR('webpack-stats.json')),
+        'STATS_FILE': str(ROOT_DIR('webpack-stats.json')),
         'POLL_INTERVAL': 0.1,
         'TIMEOUT': None,
         'IGNORE': [r'.+\.hot-update.js', r'.+\.map']
