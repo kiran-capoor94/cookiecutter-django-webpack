@@ -1,6 +1,8 @@
 {% raw %}{% load static i18n account %}{% endraw %}
+
 {% if cookiecutter.use_compressor == "y" %}
 {% raw %}{% load compress %}{% endraw %}
+{% endif %}
 
 {% if cookiecutter.use_webpack == "y" %}
 {% raw %}{% load render_bundle from webpack_loader %}{% endraw %}
@@ -31,6 +33,7 @@
 
   {% block css %}
   {% endraw %}
+
   {% if cookiecutter.custom_bootstrap_compilation == "y" %}
   {% raw %}
   <!-- Latest compiled and minified Bootstrap 4.1.1 CSS -->
@@ -139,9 +142,19 @@
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   {% block javascript %}
-  {% endraw %}{% if cookiecutter.custom_bootstrap_compilation == "y" and cookiecutter.js_task_runner == "Gulp" %}{% raw %}
+  {% endraw %}
+
+  {% if cookiecutter.custom_bootstrap_compilation == "y" and cookiecutter.js_task_runner == "Gulp" %}
+  {% raw %}
   <!-- Vendor dependencies bundled as one file-->
-  {% endraw %}{% if cookiecutter.use_compressor == "y" %}{% raw %}{% compress js %}{% endraw %}{% endif %}{% raw %}
+  {% endraw %}
+  {% endif %}
+
+  {% if cookiecutter.use_compressor == "y" %}
+  {% raw %}{% compress js %}{% endraw %}
+  {% endif %}
+
+  {% raw %}
   <script src="{% static 'js/vendors.js' %}"></script>
   {% endraw %}
   {% if cookiecutter.use_compressor == "y" %}
@@ -164,18 +177,21 @@
   <!-- Your stuff: Third-party javascript libraries go here -->
   {% endraw %}
   {% endif %}
+
   {% raw %}
   <!-- place project specific Javascript in this file -->
   {% endraw %}
   {% if cookiecutter.use_compressor == "y" %}
   {% raw %}{% compress js %}{% endraw %}
   {% endif %}
+
   {% raw %}
   <script src="{% static 'js/project.js' %}"></script>
   {% endraw %}
   {% if cookiecutter.use_compressor == "y" %}
   {% raw %}{% endcompress %}{% endraw %}
   {% endif %}
+
   {% raw %}
   {% endraw %}
   {% if cookiecutter.use_webpack == "y" %}
@@ -183,6 +199,7 @@
   {% render_bundle 'main' 'js' attrs="async" %}
   {% endraw %}
   {% endif %}
+
   {% raw %}
   {% endblock javascript %}
 </body>
